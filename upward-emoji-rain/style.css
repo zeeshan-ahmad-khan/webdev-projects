@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    position: fixed;
+    color: red;
+    opacity: 0.3;
+    user-select: none;
+}
+
+.heart{
+    position: fixed;
+    font-size: 3rem;
+    top: -5vh;
+    transform: translateY(110vh);
+    animation: fall 1.5s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(-5vh);
+    }
+}

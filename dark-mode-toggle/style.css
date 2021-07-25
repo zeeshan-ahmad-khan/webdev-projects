@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    transition: background 0.3s linear, color 0.3s linear;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+input{
+    user-select: none;
+}
+
+.toggle-container{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    position: fixed;
+    top: 0;
+}
+
+.container{
+    height: 500px;
+    width: 300px;
+    box-shadow: 3px 3px 10px black;
+    overflow: hidden;
+}
+
+img{
+    object-fit: cover;
+    height: 100%;
+    transform-origin: center center;
+}

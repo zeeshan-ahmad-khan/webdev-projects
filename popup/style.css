@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(151, 151, 151);
+}
+
+h1{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+#open{
+    position: fixed;
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-window{
+    position: fixed;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.popup-window.active{
+    display: inherit;
+}
+
+#closed{
+    position: absolute;
+    margin: 1rem;
+    padding: 0.5;
+    top: 0;
+    right: 0;
+    border-style: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+h2{
+    margin-bottom: 2rem;
+}

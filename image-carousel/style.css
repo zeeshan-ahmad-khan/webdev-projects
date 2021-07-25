@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    position: fixed;
+    top: 10px;
+    color: rgb(146, 183, 204)
+}
+
+.carousel{
+    box-shadow: 2px 2px 5px black;
+    overflow: hidden;
+    height: 500px;
+    width: 300px;
+}
+
+.image-container{
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.3s linear;
+}
+
+img{
+    object-fit: cover;
+    height: 500px;
+    width: 300px;
+}
