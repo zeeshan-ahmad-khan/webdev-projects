@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: olivedrab;
+}
+
+h1{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color:rgb(255, 255, 255);
+}
+
+div{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
