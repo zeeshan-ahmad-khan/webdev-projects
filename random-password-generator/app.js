@@ -32,7 +32,7 @@ submitBtn.addEventListener('click', () => {
 
             setTimeout(() => {
                 document.body.removeChild(div);
-            }, 1000);
+            }, 5000);
         }else{
 
             const password = passGen(char, len);
@@ -49,7 +49,7 @@ submitBtn.addEventListener('click', () => {
 
         setTimeout(() => {
             document.body.removeChild(div);
-        }, 1000);
+        }, 5000);
     }
 
     ipBox.value = "";
