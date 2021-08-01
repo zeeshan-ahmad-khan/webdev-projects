@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 550px;
+  height: 750px;
+  background-color: #202020;
+}
+
+.op-screen {
+  background-color: #5a5a5a;
+  height: 25%;
+  position: relative;
+}
+
+.op-screen .display {
+  height: 70%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  padding: 15px;
+  color: white;
+}
+
+.op-screen .output {
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  padding: 15px;
+  color: white;
+}
+
+.keypad {
+  height: 75%;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(7, 1fr);
+  /* grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr); */
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  font-size: 25px;
+}
+
+.keypad div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+}
+
+
+.keypad div:hover{
+    background-color: #303030;
+}
+
+.result{
+    background-color: #ad0000;
+}
+
+.switch{
+    font-size: 30px;
+}
+
+.active{
+  background-color: #0061cf63;
+}
