@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c0dbe4;
+  margin: 0 auto;
+  color: #000e3b;
+}
+
+.text-container {
+  margin: 50px;
+}
+
+.text-container h1 {
+  font-size: 50px;
+  color: #000e3b;
+}
+
+.start {
+  background: transparent;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #0044ff;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.turn{
+  width: 100%;
+  font-size: 30px;
+  margin: 25px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #000e3b;
+}
+
+.x-turn, .o-turn{
+  text-align: center;
+  width: 50%;
+  
+}
+
+.highlight{
+  background-color: #0044ff;
+  color: #f3f3f3;
+}
+
+.board-tiles {
+  width: 350px;
+  height: 350px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tile {
+  font-size: 70px;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid #000e3b;
+  color: #000e3b;
+  height: calc(350px/3);
+  cursor: pointer;
+}
+
+.tile:hover {
+  background-color: #9fd5e7;
+}
+
+.tile:nth-child(1),
+.tile:nth-child(2),
+.tile:nth-child(3) {
+  border-top: none;
+}
+
+.tile:nth-child(3n) {
+  border-right: none;
+}
+
+.tile:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.tile:nth-child(7),
+.tile:nth-child(8),
+.tile:nth-child(9) {
+  border-bottom: none;
+}
+
+.winner{
+  display: none;
+  position: absolute;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #0044ff;
+  color: #f3f3f3;
+}
+
+.opaque{
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1300px){
+  body{
+    flex-direction: row;
+  }
+
+  .start{
+    padding: 15px;
+    font-size: 25px;
+  }
+
+  .text-container{
+    width: 30%;
+  }
+
+  .text-container h1{
+    font-size: 60px;
+  }
+
+  .board-container{
+    width: 70%;
+  }
+
+  .turn{
+    width: 50%;
+  }
+
+  .board-tiles{
+    width: 500px;
+    height: 500px;
+  }
+
+  .tile{
+    height: calc(500px/3);
+    font-size: 90px;
+  }
+}
