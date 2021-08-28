@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="dark-mode-toggle">
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">Dark Mode !</label>
+    </div>
+    <div class="clock-container">
+      <div class="clock">
+            <div class="hour"></div>
+            <div class="min"></div>
+            <div class="sec"></div>
+      </div>
+        <div class="twelve num">12</div>
+        <div class="three num">3</div>
+        <div class="six num">6</div>
+        <div class="nine num">9</div>
+    </div>
+
+    <script>
+      const secHand = document.querySelector(".sec");
+      const minHand = document.querySelector(".min");
+      const hourHand = document.querySelector(".hour");
+      const checkbox = document.getElementById("checkbox");
+
+      setInterval(() => {
+        const date = new Date();
+        let sec = date.getSeconds();
+        let min = date.getMinutes();
+        let hour = date.getHours();
+
+        secHand.style.transform = `rotateZ(${(sec * 360) / 60}deg)`;
+        minHand.style.transform = `rotateZ(${
+          (min * 360) / 60 + (sec * 360) / 60 / 60
+        }deg)`;
+        hourHand.style.transform = `rotateZ(${
+          (hour * 360) / 12 + (min * 360) / 12 / 60
+        }deg)`;
+
+      });
+
+      const darkMode = (e) => {
+
+        if(e.target.checked){
+          document.documentElement.setAttribute('data-theme','dark')
+        }else{
+          document.documentElement.setAttribute('data-theme','light');
+        }
+      }
+
+      checkbox.addEventListener('change',darkMode);
+
+    </script>
+  </body>
+</html>

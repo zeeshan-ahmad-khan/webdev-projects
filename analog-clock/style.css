@@ -1,0 +1,154 @@
+:root {
+  --dark: #181818;
+  --light: #ebebeb;
+}
+
+[data-theme="dark"] {
+  --dark: #ebebeb;
+  --light: #181818;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 0.3s;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  font-size: 15px;
+  top: 50px;
+  left: 20px;
+}
+
+.clock-container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock {
+  /* border: 3px solid var(--light); */
+  box-shadow: 0 0 10px var(--dark);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: var(--dark);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.hour {
+  position: absolute;
+  left: 246px;
+  bottom: 245px;
+  width: 7px;
+  height: 90px;
+  background: var(--dark);
+  transform-origin: bottom;
+  border-radius: 50%;
+}
+
+.min {
+  position: absolute;
+  left: 243px;
+  bottom: 249px;
+  height: 120px;
+  width: 7px;
+  background: var(--dark);
+  transform-origin: bottom;
+  border-radius: 50%;
+}
+
+.sec {
+  position: absolute;
+  border-radius: 50%;
+  left: 243px;
+  bottom: 249px;
+  width: 3px;
+  height: 170px;
+  background: #d40000;
+  transform-origin: bottom;
+}
+
+.num {
+  position: absolute;
+  font-size: 50px;
+}
+
+.twelve {
+  top: 5px;
+}
+
+.three {
+  right: 10px;
+}
+
+.six {
+  bottom: 5px;
+}
+
+.nine {
+  left: 10px;
+}
+
+@media screen and (max-width: 550px) {
+  .clock-container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .clock::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .hour {
+    left: 173px;
+    bottom: 175px;
+    width: 5px;
+    height: 60px;
+  }
+
+  .min {
+    left: 173px;
+    bottom: 175px;
+    width: 5px;
+    height: 85px;
+  }
+
+  .sec {
+    left: 173px;
+    bottom: 175px;
+    width: 3px;
+    height: 105px;
+  }
+
+  .num{
+    font-size: 30px;
+  }
+}
